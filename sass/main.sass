@@ -2,8 +2,9 @@
   box-sizing: border-box
 body
   background-color: rgb(0, 0, 0)
-  height: 3000px
   font-family: Poppins
+  position: relative
+  z-index: 0
 
 #bg_layer
   position: fixed
@@ -19,6 +20,7 @@ body
 
 .header
   position: fixed
+  z-index: 101
   height: 70px
   width: 100%
   display: block
@@ -95,7 +97,172 @@ body
           -webkit-transition: all .35s ease
           -o-transition: all .35s ease
           transition: all .35s ease
+main
+  padding-top: 70px
+  position: relative
+  z-index: 1
+  background-color: rgb(0, 0, 0)
+  .container
+    position: relative
+    .container-text
+      position: absolute
+      top: 38%
+      h1
+        font-size: 50px
+        display: inline-block
+        font-weight: 600
+        letter-spacing: 20px
+        color: rgba(255,255,255,0.2)
+        position: relative
+        opacity: 0
+      h3
+        color: rgba(255,255,255,0.8)
+      #typed
+        color: rgba(255,255,255,0.5)
+  .first-text-block
+    opacity: 0
+    position: relative
+    top: 100px
+    color: rgba(255,255,255,0.4)
+  .second-text-block
+    color: rgba(255,255,255,0.6)
+    font-weight: 200
+    div
+      position: relative
+      opacity: 0
+    h3
+      font-size: 30px
+      color: rgba(255,255,255,1)
+    p
+      font-size: 16px
+  .third-text-block
+    position: relative
+    height: 520px
+    img
+      position: absolute
+      margin: auto
+      left: 50%
+      margin-left: -185px
+footer
+  z-index: -2
+  position: relative
+  display: block
+  height: 450px
+  background-color: black
+  .container-fluid
+    position: fixed
+    z-index: -1
+    bottom: 0
+    width: 100%
+    padding: 0 !important
+    display: flex
+    .img-responsive
+      max-height: 450px
+.last-block
+  background-color: black
+  padding-top: 100px
+  padding-bottom: 100px
+  h1, p
+    color: white
+    opacity: 0.5
 
+
+@media screen and (min-width: 768px)
+  .sm-menu
+    display: none
+  .mg-md-b
+    margin-bottom: 180px
+  .mg-md-t
+    margin-top: 180px
 @media screen and (max-width: 768px)
+  main
+    .third-text-block
+      img
+        //left: 26%
+
   .header-nav-get_in_touch, .navbar
     display: none
+
+  .navbar-close-button
+    position: relative
+    top: -60px
+  .container-text
+    position: relative !important
+
+  .sm-menu
+    position: fixed
+    z-index: 90
+    width: 100%
+    height: 100%
+    background: #fff
+    left: 100%
+    overflow-y: scroll
+  .navbar-close, .sm-menu-nav
+    display: block
+    margin: 30px auto 60px
+    width: 50%
+    min-width: 270px
+  .sm-menu-nav
+    a
+      padding:
+        top: 20px !important
+        bottom: 20px !important
+      padding-left: 0px !important
+      color: #777
+      text-transform: uppercase
+      border-bottom: 1px #eef1f6 solid
+      font-family: inherit
+      font-size: 12px
+      font-weight: 600
+      &:hover
+        color: #000
+    li
+      top: 200px
+  .navbar-contacts
+    position: relative
+    top: 95px
+    display: block
+    margin: 30px auto 60px
+    width: 50%
+    min-width: 270px
+    div
+      display: inline-block
+      padding:
+        left: 0px
+        right: 0px
+        top: 2px
+        bottom: 11px
+      margin:
+          top: 3px
+          bottom: 3px
+          left: 0px
+          right: 30px
+      span
+        font-size: 11px
+        font-weight: 600
+        letter-spacing: 2px
+        color: #777
+        text-transform: uppercase
+      a
+        &:after
+          background-color: black
+          display: block
+          content: ""
+          height: 2px
+          width: 0%
+          -webkit-transition: width .2s ease-in-out
+          -moz--transition: width .2s ease-in-out
+          transition: width .2s ease-in-out
+          text-decoration: none
+        &:active, &:hover
+          background-color: white !important
+          color: rgba(0,0,0,1)
+          text-decoration: none
+        &:hover:after,&:focus:after
+          width: 100%
+          text-decoration: none
+
+
+
+
+
